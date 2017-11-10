@@ -1,0 +1,54 @@
+* {
+box-sizing: border-box;
+
+}
+
+body {
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 0;
+  padding: 0;
+  font-family: 'Merriweather', serif;
+}
+
+.search {
+  margin-right: 1em;
+}
+
+.searchbar input {
+  width: 100%;
+  height: 2.1em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+  overflow: none;
+  display: flex;
+  font-size: 1.5em;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #fff;
+
+}
+
+
+[placeholder]::-webkit-input-placeholder { /*Fixes placeholder text so it is
+                                            different from user input text*/
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: 12px;
+
+}
+
+.img-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+img {
+  display: flex;
+  width: 50vw;
+  height: 100%;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
