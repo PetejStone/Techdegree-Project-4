@@ -5,50 +5,100 @@ box-sizing: border-box;
 
 body {
   margin-top: 1em;
-  margin-left: 1em;
-  margin-right: 0;
+  margin-left: 0;
+
   padding: 0;
   font-family: 'Merriweather', serif;
 }
 
 .search {
   margin-right: 1em;
+  margin-left: 1em;
 }
 
 .searchbar input {
   width: 100%;
   height: 2.1em;
-  margin-right: 1em;
-  margin-bottom: 2em;
+  margin-right: 0;
+  margin-bottom: 0;
   overflow: none;
   display: flex;
   font-size: 1.5em;
   text-align: center;
-  border-radius: 3px;
-  background-color: #fff;
-
+  box-shadow: none;
+  border: 1px solid grey;
+  border-radius: 6px;
 }
 
+.searchbar input:focus {
+  outline-color: #cc0000
+}
 
 [placeholder]::-webkit-input-placeholder { /*Fixes placeholder text so it is
                                             different from user input text*/
   text-align: center;
   font-family: 'Merriweather', serif;
   font-size: 12px;
-
+  color: #d9d9d9;
 }
 
-.img-row {
+/*.img-row {
   display: flex;
   flex-direction: row;
   width: 100%;
+}*/
+
+.img-gallery {
+  overflow: hidden;
+  text-align: center;
+}
+
+.img-gallery > :nth-child(2n+1){  /*margin right every other image*/
+  margin-right: .5em;
 }
 
 img {
-  display: flex;
-  width: 50vw;
-  height: 100%;
-  margin-right: 1rem;
+  width: 47%; /*Set to 47 because 50 does not work with margins.*/
   margin-bottom: 1rem;
   overflow: hidden;
 }
+
+@media (min-width: 768px) {
+
+  .searchbar input {
+    width: 70%;
+    margin: auto; /*centers the searchbar*/
+  }
+
+  img {
+    margin-right: .5em;
+    width: 31%; /*set to 30% because 33.3 does not work with margins*/
+  }
+
+  .img-gallery > :nth-child(3n+3){  /*margin right every other image*/
+    margin-right: 0;
+  }
+
+
+
+  @media (min-width: 1024px) {
+
+  .searchbar input {
+    width: 45%;
+    margin: auto; /*centers the searchbar*/
+    margin-bottom: 1.5em;
+  }
+
+    img {
+      margin-right: 0;
+      width: 15%; /*set to 30% because 33.3 does not work with margins*/
+    }
+
+    .img-gallery > :nth-child(1n+1){  /*margin right every other image*/
+      margin-right: 5em;
+      margin-bottom: 3em;
+    }
+
+    .img-gallery > :nth-child(4n+4){  /*margin right every other image*/
+      margin-right: 0;
+    }
