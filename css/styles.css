@@ -6,7 +6,6 @@ box-sizing: border-box;
 body {
   margin-top: 1em;
   margin-left: 0;
-
   padding: 0;
   font-family: 'Merriweather', serif;
 }
@@ -22,16 +21,17 @@ body {
   margin-right: 0;
   margin-bottom: 0;
   overflow: none;
-  display: flex;
+  display: flex; /*Needed for media query break points to work*/
   font-size: 1.5em;
   text-align: center;
   box-shadow: none;
   border: 1px solid grey;
   border-radius: 6px;
+  font-family: 'Merriweather', serif;
 }
 
 .searchbar input:focus {
-  outline-color: #cc0000
+  outline-color: #cc0000; /*Changed outline color of searchbar:focus*/
 }
 
 [placeholder]::-webkit-input-placeholder { /*Fixes placeholder text so it is
@@ -42,14 +42,9 @@ body {
   color: #d9d9d9;
 }
 
-/*.img-row {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}*/
 
 .img-gallery {
-  overflow: hidden;
+  overflow: hidden; /*Fixed margin problem on right*/
   text-align: center;
 }
 
