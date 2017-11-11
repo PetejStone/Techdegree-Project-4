@@ -27,6 +27,7 @@ body.lb-disable-scrolling {
   text-align: center;
   line-height: 0;
   font-weight: normal;
+  display: none;
 }
 
 .lightbox .lb-image {
@@ -134,6 +135,7 @@ body.lb-disable-scrolling {
   -moz-transition: opacity 0.6s;
   -o-transition: opacity 0.6s;
   transition: opacity 0.6s;
+
 }
 
 .lb-nav a.lb-next:hover {
