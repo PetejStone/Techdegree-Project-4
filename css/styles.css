@@ -12,6 +12,10 @@ body {
   background-color: #a1a1a1;
 }
 
+span q {
+  display: none;
+}
+
 .search {
   margin-right: 1em;
   margin-left: 1em;
@@ -22,7 +26,6 @@ body {
   height: 2.1em;
   margin-right: 0;
   margin-bottom: 0;
-  overflow: none;
   display: flex; /*Needed for media query break points to work*/
   font-size: 1.5em;
   text-align: center;
@@ -46,12 +49,12 @@ body {
 }
 
 
-.img-gallery {
+.list {
   overflow: hidden; /*Fixed margin problem on right*/
   text-align: center;
 }
 
-.img-gallery > :nth-child(2n+1){  /*margin right every other image*/
+.list > :nth-child(2n+1){  /*margin right every other image*/
   margin-right: .5em;
 }
 
@@ -73,11 +76,11 @@ img {
     width: 31%; /*set to 30% because 33.3 does not work with margins*/
   }
 
-  .img-gallery > :nth-child(3n+3){  /*margin right every other image*/
+  .list > :nth-child(3n+3){  /*margin right every other image*/
     margin-right: 0;
   }
 
-
+}
 
   @media (min-width: 1024px) {
 
@@ -92,11 +95,13 @@ img {
       width: 15%; /*set to 30% because 33.3 does not work with margins*/
     }
 
-    .img-gallery > :nth-child(1n+1){  /*margin right every other image*/
+    .list > :nth-child(1n+1){  /*margin right every other image*/
       margin-right: 5em;
       margin-bottom: 3em;
     }
 
-    .img-gallery > :nth-child(4n+4){  /*margin right every other image*/
+    .list > :nth-child(4n+4){  /*margin right every other image*/
       margin-right: 0;
     }
+
+}
