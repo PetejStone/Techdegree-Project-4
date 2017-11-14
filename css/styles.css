@@ -76,6 +76,10 @@ img {
     width: 31%; /*set to 30% because 33.3 does not work with margins*/
   }
 
+  .list > :nth-child(2n+1){  /*fixes margin from previous media query*/
+    margin-right: 0em;
+  }
+
   .list > :nth-child(3n+3){  /*margin right every other image*/
     margin-right: 0;
   }
@@ -93,6 +97,7 @@ img {
     img {
       margin-right: 0;
       width: 15%; /*set to 30% because 33.3 does not work with margins*/
+      margin-bottom: 2em;
     }
 
     .list > :nth-child(1n+1){  /*margin right every other image*/
@@ -103,5 +108,6 @@ img {
     .list > :nth-child(4n+4){  /*margin right every other image*/
       margin-right: 0;
     }
+
 
 }
