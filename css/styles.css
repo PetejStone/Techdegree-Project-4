@@ -6,6 +6,7 @@ box-sizing: border-box;
 body {
   margin-top: 1em;
   margin-left: 0;
+  margin: auto; /*keeps content centered*/
   padding: 0;
   font-family: 'Merriweather', serif;
   max-width: 1230px;  /*Max width to stop it from continuing to expand on larger screens*/
@@ -58,7 +59,7 @@ span q {
   margin-right: .5em;
 }
 
-img {
+.list a img{
   width: 47%; /*Set to 47 because 50 does not work with margins.*/
   margin-bottom: 1rem;
   overflow: hidden;
@@ -71,12 +72,12 @@ img {
     margin: auto; /*centers the searchbar*/
   }
 
-  img {
+  .list a img {
     margin-right: .5em;
     width: 31%; /*set to 30% because 33.3 does not work with margins*/
   }
 
-  .list > :nth-child(2n+1){  /*fixes margin from previous media query*/
+  .list > :nth-child(2n+1){  /*margin right every other image*/
     margin-right: 0em;
   }
 
@@ -94,20 +95,16 @@ img {
     margin-bottom: 1.5em;
   }
 
-    img {
-      margin-right: 0;
-      width: 15%; /*set to 30% because 33.3 does not work with margins*/
+    .list a img{
+      width: 20%;
+      margin-left: 1em;
+      margin-right: 1em;
       margin-bottom: 2em;
+      text-align: center;
     }
 
-    .list > :nth-child(1n+1){  /*margin right every other image*/
-      margin-right: 5em;
-      margin-bottom: 3em;
+    .list {
+      text-align: center;
     }
 
-    .list > :nth-child(4n+4){  /*margin right every other image*/
-      margin-right: 0;
-    }
-
-
-}
+    .
