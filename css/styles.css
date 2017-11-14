@@ -4,9 +4,8 @@ box-sizing: border-box;
 }
 
 body {
+  margin: auto;
   margin-top: 1em;
-  margin-left: 0;
-  margin: auto; /*keeps content centered*/
   padding: 0;
   font-family: 'Merriweather', serif;
   max-width: 1230px;  /*Max width to stop it from continuing to expand on larger screens*/
@@ -25,6 +24,7 @@ span q {
 .searchbar input {
   width: 100%;
   height: 2.1em;
+  margin-top: 1em;
   margin-right: 0;
   margin-bottom: 0;
   display: flex; /*Needed for media query break points to work*/
